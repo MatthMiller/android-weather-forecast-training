@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text } from 'react-native';
+import Header from './Components/Header';
+import WeatherIntro from './Components/WeatherIntro';
+import WeatherForecast from './Components/WeatherForecast';
+import WeatherBottom from './Components/WeatherBottom';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView nestedScrollEnabled={true} style={styles.container}>
+      <Header />
+      <WeatherIntro />
+      <WeatherForecast />
+      <WeatherBottom />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#181C1F',
+    paddingHorizontal: 15,
   },
 });
